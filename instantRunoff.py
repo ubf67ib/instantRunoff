@@ -44,17 +44,6 @@ def main():
         #Do the loser(s)
         [losers.append(x) for x in ut.indexes(picks[n], ut.minNonZero(picks[n]))]
 
-        # #Second round time
-        # secondPicks = [0]*cols
-        # for index, row in data.iterrows():
-        #     row = list(row)
-        #     minVote = 1
-        #     while row.index(minVote) in losers:
-        #         minVote += 1
-        #     secondPicks[row.index(minVote)] += 1
-
-        # #Second round losers
-        # [losers.append(x) for x in ut.indexes(secondPicks, ut.minNonZero(secondPicks))]
     [print(data.columns[x]) for x in ut.indexes(picks[n], max(picks[n]))]
 
 if __name__ == "__main__":
